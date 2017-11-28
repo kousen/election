@@ -11,14 +11,14 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
 
+import static com.kousenit.election.beans.Agony.ELECTION_DAY_2018;
+import static com.kousenit.election.beans.Agony.ELECTION_DAY_2020;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ElectionApplicationTests {
-    private static final LocalDate ELECTION_DAY_2018 = LocalDate.of(2018, Month.NOVEMBER, 6);
-    private static final LocalDate ELECTION_DAY_2020 = LocalDate.of(2020, Month.NOVEMBER, 3);
 
     @Autowired
     private Agony agony;

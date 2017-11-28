@@ -9,16 +9,18 @@ import java.util.Objects;
 
 @Component
 public class Agony {
+    public static final LocalDate ELECTION_DAY_2018 =
+            LocalDate.of(2018, Month.NOVEMBER, 6);
+    public static final LocalDate ELECTION_DAY_2020 =
+            LocalDate.of(2020, Month.NOVEMBER, 3);
     private final String daysToElectionDay2018;
     private final String daysToElectionDay2020;
 
     public Agony() {
-        LocalDate electionDay2018 = LocalDate.of(2018, Month.NOVEMBER, 6);
-        LocalDate electionDay2020 = LocalDate.of(2020, Month.NOVEMBER, 3);
         LocalDate now = LocalDate.now();
 
-        Period to2018 = now.until(electionDay2018);
-        Period to2020 = now.until(electionDay2020);
+        Period to2018 = now.until(ELECTION_DAY_2018);
+        Period to2020 = now.until(ELECTION_DAY_2020);
 
         daysToElectionDay2018 = format(to2018);
         daysToElectionDay2020 = format(to2020);
