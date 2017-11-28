@@ -27,11 +27,3 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
-
-task jarName {
-	doLast {
-		libsDir.eachFile { println it }
-	}
-}
-
-build.dependsOn(jarName)
