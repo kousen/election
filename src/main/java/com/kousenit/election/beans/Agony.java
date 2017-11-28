@@ -13,8 +13,11 @@ public class Agony {
             LocalDate.of(2018, Month.NOVEMBER, 6);
     public static final LocalDate ELECTION_DAY_2020 =
             LocalDate.of(2020, Month.NOVEMBER, 3);
+
     private final String daysToElectionDay2018;
     private final String daysToElectionDay2020;
+    private final String electionDay2018 = ELECTION_DAY_2018.toString();
+    private final String electionDay2020 = ELECTION_DAY_2020.toString();
 
     public Agony() {
         LocalDate now = LocalDate.now();
@@ -37,6 +40,14 @@ public class Agony {
 
     public String getDaysToElectionDay2020() {
         return daysToElectionDay2020;
+    }
+
+    public String getElectionDay2018() {
+        return electionDay2018;
+    }
+
+    public String getElectionDay2020() {
+        return electionDay2020;
     }
 
     @Override
